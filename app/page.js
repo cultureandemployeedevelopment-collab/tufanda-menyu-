@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 
 // GOOGLE APPS SCRIPT URL - HƏR İKİSİNDƏ EYNİ OLACAQ
-const API_URL = 'https://script.google.com/macros/s/AKfycbwOTOp6cr4ESevoJxY789mi--m2U18AODkAo2JT3gVWj-q-MXLFY69vWNAT5r4gIQt9Wg/exec'
+const API_URL = 'https://script.google.com/macros/s/AKfycbyAOWRvy3qp_e70E7-imaELfnu_rSP2BVYxdc0K931sG0MtDxWACEIyUCzKJS8iBBEH4Q/exec'
 
 export default function Menu() {
   const [data, setData] = useState(null)
