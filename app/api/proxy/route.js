@@ -1,13 +1,13 @@
 import { NextResponse } from 'next/server'
 
-const API_URL = process.env.API_URL || 'https://script.google.com/macros/s/AKfycbxX3lyIA4BViauJdYhs8jQoOoP8L72u597iJVj2k86TLTOu6ujDMyAPObgPoOtZvIBXvg/exec'
+const API_URL = process.env.API_URL || 'https://script.google.com/macros/s/AKfycby5I_jtxV3iiKJ34jBSq78EHxBGC_mwJu4_omneY0cMV3oKr6nvsbHnf4Nf0M9-sZV4lQ/exec'
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url)
-  const action = searchParams.get('action')
+  const upstreamParams = new URLSearchParams(searchParams)
 
   try {
-    const response = await fetch(`${API_URL}?action=${action}`, {
+    const response = await fetch(`${API_URL}?${upstreamParams.toString()}`, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     })

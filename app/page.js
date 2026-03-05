@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react'
 
-// GOOGLE APPS SCRIPT URL - HƏR İKİSİNDƏ EYNİ OLACAQ
-const API_URL = 'https://script.google.com/macros/s/AKfycby5I_jtxV3iiKJ34jBSq78EHxBGC_mwJu4_omneY0cMV3oKr6nvsbHnf4Nf0M9-sZV4lQ/exec'
+// API sorğuları Next.js proxy route üzərindən göndərilir.
+// Beləliklə admin panel və menyu eyni App Script URL-dən istifadə edir.
+const API_URL = '/api/proxy'
 
 export default function Menu() {
   const [data, setData] = useState(null)
