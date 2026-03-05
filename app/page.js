@@ -672,38 +672,6 @@ export default function Menu() {
           🔄 {t('Yenilə', 'Refresh')}
         </button>
 
-        {/* Admin Link */}
-        <div style={{
-          marginTop: '24px', 
-          paddingTop: '24px', 
-          borderTop: '1px solid #e9ecef'
-        }}>
-          <a 
-            href="/admin" 
-            onClick={(e) => {
-              e.preventDefault()
-              window.open('https://admin-panorama.vercel.app', '_blank')
-            }}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '8px',
-              padding: '14px',
-              background: '#212529',
-              color: 'white',
-              borderRadius: '10px',
-              textDecoration: 'none',
-              fontWeight: 600,
-              fontSize: '14px',
-              transition: 'all 0.2s'
-            }}
-            onMouseEnter={(e) => e.target.style.background = '#000'}
-            onMouseLeave={(e) => e.target.style.background = '#212529'}
-          >
-            ⚙️ {t('Admin Panel', 'Admin Panel')}
-          </a>
-        </div>
       </aside>
     </div>
   )
